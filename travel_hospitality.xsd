@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Travel">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Destination" type="DestinationType"/>
+                <xs:element name="Hotel" type="HotelType"/>
+                <xs:element name="TouristAttraction" type="TouristAttractionType"/>
+                <xs:element name="Transport" type="TransportType"/>
+                <xs:element name="Restaurant" type="RestaurantType"/>
+                <xs:element name="TourPackage" type="TourPackageType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="DestinationType">
+        <xs:sequence>
+            <xs:element name="Name" type="xs:string"/>
+            <xs:element name="Country" type="xs:string"/>
+            <xs:element name="Coordinates" type="xs:string"/>
+            <xs:element name="Description" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="HotelType">
+        <xs:sequence>
+            <xs:element name="Name" type="xs:string"/>
+            <xs:element name="Rating">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="1"/>
+                        <xs:maxInclusive value="7"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="Address" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TouristAttractionType">
+        <xs:sequence>
+            <xs:element name="Name" type="xs:string"/>
+            <xs:element name="Type" type="xs:string"/>
+            <xs:element name="OpeningHours" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TransportType">
+        <xs:sequence>
+            <xs:element name="Type" type="xs:string"/>
+            <xs:element name="From" type="xs:string"/>
+            <xs:element name="To" type="xs:string"/>
+            <xs:element name="Duration" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="RestaurantType">
+        <xs:sequence>
+            <xs:element name="Name" type="xs:string"/>
+            <xs:element name="Cuisine" type="xs:string"/>
+            <xs:element name="Rating">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="1"/>
+                        <xs:maxInclusive value="7"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TourPackageType">
+        <xs:sequence>
+            <xs:element name="Name" type="xs:string"/>
+            <xs:element name="Duration" type="xs:string"/>
+            <xs:element name="Price">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="Description" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

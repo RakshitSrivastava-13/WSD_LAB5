@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT Travel (Destination, Hotel, TouristAttraction, Transport, Restaurant, TourPackage)>
+
+<!ELEMENT Destination (Name, Country, Coordinates, Description)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Country (#PCDATA)>
+<!ELEMENT Coordinates (#PCDATA)>
+<!ELEMENT Description (#PCDATA)>
+
+<!ELEMENT Hotel (Name, Rating, Address)>
+<!ELEMENT Rating (#PCDATA)>
+<!ELEMENT Address (#PCDATA)>
+
+<!ELEMENT TouristAttraction (Name, Type, OpeningHours)>
+<!ELEMENT Type (#PCDATA)>
+<!ELEMENT OpeningHours (#PCDATA)>
+
+<!ELEMENT Transport (Type, From, To, Duration)>
+<!ELEMENT From (#PCDATA)>
+<!ELEMENT To (#PCDATA)>
+<!ELEMENT Duration (#PCDATA)>
+
+<!ELEMENT Restaurant (Name, Cuisine, Rating)>
+<!ELEMENT Cuisine (#PCDATA)>
+
+<!ELEMENT TourPackage (Name, Duration, Price, Description)>
+<!ELEMENT Price (#PCDATA)>

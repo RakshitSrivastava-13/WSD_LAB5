@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Travel SYSTEM "travel_hospitality.dtd">
+<?xml-stylesheet type="text/xsl" href="travel1.xsl"?>
+<!-- <?xml-model href="travel_hospitality.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?> -->
+
+<Travel>   
+    <Destination>
+        <Name>Varanasi</Name>
+        <Country>India</Country>
+        <Coordinates>48.8566, 2.3522</Coordinates>
+        <Description>City of Ghats</Description>
+    </Destination> 
+
+    <Hotel>
+        <Name>The Taj</Name>
+        <Rating>7</Rating>
+        <Address>22 Sarnath 221007, Varanasi</Address>
+    </Hotel>
+
+    <TouristAttraction>
+        <Name>Temples and ghats</Name>
+        <Type>Historical</Type>
+        <OpeningHours>24 Hrs</OpeningHours>
+    </TouristAttraction>
+
+    <Transport>
+        <Type>Flight</Type>
+        <From>Bengaluru</From>
+        <To>Varanasi</To>
+        <Duration>2.5 hours</Duration>
+    </Transport>
+
+    <Restaurant>
+        <Name>Madhuvan Palace</Name>
+        <Cuisine>Dinner</Cuisine>
+        <Rating>7</Rating>
+    </Restaurant>
+
+    <TourPackage>
+        <Name>Explore Kashi</Name>
+        <Duration>7 days</Duration>
+        <Price>5000</Price>
+        <Description>Explore, city of ghats.Namo Kashi!</Description>
+    </TourPackage>
+
+</Travel>
